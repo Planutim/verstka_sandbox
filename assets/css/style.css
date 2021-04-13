@@ -10,8 +10,6 @@ body{
     color: white;
     font-family: 'Open Sans';
 }
-
-
 .header{
     display: flex;
     flex-direction: column;
@@ -27,7 +25,7 @@ body{
     display: flex;
     flex-direction: row;
     align-self: flex-start;
-    margin-left: 500px;
+    margin-left: 405px;
 }
 
 .nav{
@@ -105,7 +103,7 @@ body{
 
 .header_content{
     margin-top: 145px;
-    margin-left: 25px; 
+    margin-left: 5px; 
 }
 .content{
     display: flex;
@@ -168,10 +166,20 @@ body{
     grid-template-columns: 110px 1fr 150px;
 }
 .about__images{
-    margin-top: 80px; 
+    margin-top: 60px; 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 65px;
+}
+
+.about__image{
+    position: relative;
+}
+.image-background{
+    position: absolute;
+    top: -22px;
+    left: -17px;
+    z-index: -1;
 }
 
 .arrow{
@@ -256,10 +264,9 @@ body{
 
 
 .stand{
+    position: relative;
     align-self: flex-start;
-    margin-left: 230px;
-    width: 1900px;
-    margin-top: 240px;
+    margin-top: 215px;
     display: grid;
 
     grid-template-columns: 50% 50%;
@@ -330,5 +337,14 @@ body{
 }
 
 .stand__right{
+    width: 100%;
+}
+
+.stand__bottom{
+    position: absolute;
+    background-image: url("../images/background_2.png");
+    background-repeat: repeat-x;
+    height: 200px;
+    top: 763px;
     width: 100%;
 }
