@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-width: 1920px;
+    align-items: stretch;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/header-background.png");
+    height: 790px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-nav{
+    padding-top: 16px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    margin-left: 500px;
+}
+
+.nav{
+    display: flex;
+    align-items: flex-start;
+    
+}
+.nav__list{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.nav__link{
+    padding-left: 29px;
+}
+.nav__link>a{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav__book{
+    padding: 3px 16px 3px 12px;
+    font-family: inherit;
+    text-transform: uppercase;
+    align-self: center;
+    letter-spacing: 0.05em;
+    margin-left: 18px;
+}
+
+.header-nav__icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-nav__basket{
+    margin-left: 60px;
+}
+.header-nav__login{
+    margin-left: 30px;
+}
+
+.header-nav__collapse{
+    margin-left: 27px;
+    font-size: 1.2em;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: none;
+    transform: rotate(90deg);
+    text-align:right;
+    /* font-weight: bold; */
+}
+.header-nav__collapse:before{
+    position: absolute;
+    left: 1px;
+    padding-left: 1px;
+    content: "∣"
+}
+.header-nav__collapse:after{
+    font-size: 0.5em;
+    font-weight: bold;
+    content: "∣";
+    position: absolute;
+    top: 3px;
+}
+.header-nav__collapse:focus{
+    outline: none;
+}
+
+
+.header_content{
+    margin-top: 145px;
+    margin-left: 25px; 
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content__header{
+    font-family: 'Pehlevi';
+    font-size: 4em;
+    letter-spacing: .09em;
+    font-weight: 300;
+}
+.content__paragraph{
+    margin-top: 0;
+    font-size: 1.1em;
+    letter-spacing: 0.02em;
+}
+.top_paragraph{
+    margin-bottom: 30px;
+}
+
+.button{
+    margin: 0;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    padding: 20px 45px;
+    letter-spacing: 0.02em;
+    font-family: inherit;
+}
+.button:focus{
+    border: none;
+}
+
+.text-dark{
+    color: black;
+}
+.about_content{ 
+    margin-top: 50px;
+    margin-left: 35px;
+    width: 32%;
+}
+.about_header{
+    margin-bottom: 0;
+}
+.about_paragraph{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__slider{
+    display: grid;
+    /* background-color: lightcoral; */
+    grid-template-columns: 110px 1fr 150px;
+}
+.about__images{
+    margin-top: 80px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 65px;
+}
+
+.arrow{
+    cursor: pointer;
+    align-self: center;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    margin-top: 50px;
+    transition: margin 0.3s ease-in-out;
+}
+.arrow:active{
+    padding-top: 3px;
+}
+.arrow:focus{
+    border: none;
+}
+
+.arrow-left{
+    margin-top: 85px;
+    transform: rotate(-45deg);
+}
+.arrow-right{
+    transform: rotate(45deg);
+    margin-left: 10px;
+}
+
+.arrow:before,.arrow:after{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    content: "";
+    /* border-left: 1px solid black; */
+    border-left: 6px solid black;
+}
+.arrow-left:after{
+    border-top: 6px solid black;
+}
+.arrow-right:after,.arrow-right:before{
+    border-left: none;
+    border-right: 6px solid black; 
+}
+.arrow-right:after{
+    border-top: 6px solid black;
+}
+
+.arrow_yellow:after, .arrow_yellow:before{
+    border-color:#F0C640;   
+}
+
+
+.about__legend{
+    margin-left: -80px;
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "cook profession"
+        "cook sign";
+}
+.about__cook{
+    grid-area: cook;
+    margin-left: 40px;
+}
+.about__profession{
+    margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    grid-area: profession;
+    text-transform: uppercase;
+}
+.about__sign{
+    margin-top: -10px;
+    margin-left: 0;
+    grid-area: sign;
+}
+
+
+
+.stand{
+    align-self: flex-start;
+    margin-left: 230px;
+    width: 1900px;
+    margin-top: 240px;
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+}
+.stand__left{
+    background-color: #0F1D22;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-areas:
+    ". content";
+}
+
+.stand_content{
+    grid-area: content;
+    margin-left: 5px;
+    margin-top: 115px;
+}
+
+.stand_header{
+    line-height: 55px;
+    margin-top: 150px;
+    margin: 0;
+    padding: 0;
+    
+}
+.stand_top_paragraph{
+    margin-top: 45px;
+    align-self: flex-start;
+    margin-left: 175px;
+    font-size: 1.4em;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+}
+
+.stand_bottom_paragraph{
+    font-size: 1.4em;
+    line-height: 30px;
+    margin-top: 20px;
+    width: 500px;
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+.content__author{
+    
+    margin-top: 25px;
+    align-self: flex-start;
+    margin-left: 145px;
+    font-weight: 300;
+}
+.content__author-name{
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: .25em;
+    color: #F0C640;
+    margin-bottom: 0;
+}
+.content__author-profession{
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.stand_button{
+    margin-top: 23px;
+    align-self: flex-start;
+    margin-left: 145px;
+
+}
+
+.stand__right{
+    width: 100%;
+}
